@@ -97,7 +97,7 @@ def main(is_gen_instruct=False,is_gen_training=False):
     QA_PROMPT = PromptTemplate.from_template(qa_template)
 
     llm = LlamaCpp(
-        model_path="./models/mistral-7b-instruct-v0.2.Q4_K_M.gguf",
+        model_path="./models/mistral-7b-instruct-v0.1.Q4_K_M.gguf",
         temperature=0.01,
         max_tokens=2000,
         top_p=1,

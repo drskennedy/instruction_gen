@@ -18,7 +18,7 @@ def load_doc() -> 'List[Document]':
 def vectorize(embeddings) -> tuple[FAISS,BM25Retriever]:
     docs = load_doc()
     db = FAISS.from_documents(docs, embeddings)
-    db.save_local("./opdf915_index")
+    db.save_local("./opdf_index")
     bm25_retriever = BM25Retriever.from_documents(docs)
     bm25_retriever.k=5
     return db,bm25_retriever
@@ -27,7 +27,7 @@ def vectorize(embeddings) -> tuple[FAISS,BM25Retriever]:
 def load_db() -> tuple[FAISS,BM25Retriever]:
     embeddings_model = HuggingFaceEmbeddings()
     try:
-        db = FAISS.load_local("./opdf915_index", embeddings_model)
+        db = FAISS.load_local("./opdf_index", embeddings_model)
         bm25_retriever = BM25Retriever.from_documents(load_doc())
         bm25_retriever.k=5
     except Exception as e:
