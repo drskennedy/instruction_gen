@@ -18,7 +18,7 @@ $ source llm_tuning/bin/activate
 ```
 $ pip install -r requirements.txt
 ```
-- Download mistral-7b-instruct-v0.2.Q4_K_M.gguf from [TheBloke HF report](https://huggingface.co/TheBloke/Mistral-7B-Instruct-v0.2-GGUF) to directory `models`.
+- Download mistral-7b-instruct-v0.1.Q4_K_M.gguf from [TheBloke HF report](https://huggingface.co/TheBloke/Mistral-7B-Instruct-v0.1-GGUF) to directory `models`.
 - Run script `main.py` with option -i to start the instruction generation:
 ```
 $ python main.py -i
@@ -115,5 +115,5 @@ ___
 ___
 
 ## References
-- https://huggingface.co/TheBloke/Mistral-7B-Instruct-v0.2-GGUF
+- https://huggingface.co/TheBloke/Mistral-7B-Instruct-v0.1-GGUF
 - https://github.com/ml-explore/mlx
